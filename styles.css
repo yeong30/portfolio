@@ -80,7 +80,7 @@ li {
 .section__content {
   font-size: var(--base-size-regular);
   font-weight: var(--weight-regular);
-  padding: var(--base-size-xsmall) 0;
+  padding: calc(var(--base-size-xsmall) / 2) 0;
 }
 
 /* header */
@@ -143,7 +143,9 @@ li {
 .home__user-detail > .section__content:nth-child(2) {
   font-size: var(--font-xsmall);
 }
-
+.home__user-detail .info__title {
+  font-weight: var(--weight-semi-bold);
+}
 /* skills */
 #skills {
   background-color: var(--color-gray-white);
