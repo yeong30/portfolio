@@ -2,24 +2,167 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/e8993391fb.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
+    <script src="https://kit.fontawesome.com/e8993391fb.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <script defer src="main.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>uuyeong's portfolio</title>
-    <meta name="description" content="portfolio for first step" />
-    <meta name="authot" content="uuyeong" />
+    <meta name="description" content="uuyeong's portfolio" />
+    <meta name="author" content="uuyeong" />
   </head>
   <body>
-    //ui적인 요소는 ㅇ없고 웹사이트애 관련된 정보들이 들어있음.
+    <section id="home">
+      <header class="head">
+        <p class="head__title">uuyeong</p>      
+        <nav class="navbar">
+          <ul>
+            <li class="navbar__item active">Home<a href=""></a></li>
+            <li class="navbar__item">About<a href=""></a></li>
+            <li class="navbar__item">Skills<a href=""></a></li>
+            <li class="navbar__item">Work<a href=""></a></li>
+            <li class="navbar__item">Projects<a href=""></a></li>
+            <li class="navbar__item">Contact<a href=""></a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="home__user">
+        <img class="home__user-img" src="/assets/images/people1.jpg"home__user-img" />
+        <div class="home__user-info">
+          <p class="home__hello section__sub-title">안녕하세요.<br/> 프론트엔드 개발자 조우영입니다!</p>
+
+          <p class="home__user-name section__sub-title">Jo Wooyeong</p>
+          <div class="home__user-detail">
+            <p class="section__content">Front-end developer</p>
+            <p class="section__content">~ 2014 wegooli</p>
+            <p class="section__content">blog : www.naver.com</p>
+            <p class="section__content">blog : www.naver.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__title">Hello! Im'wooyeong!</p>
+      <p class="section__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+        itaque provident neque. Aliquid, suscipit. Ex error maxime expedita
+        eius, obcaecati et eveniet accusantium doloribus itaque saepe, ducimus,
+        nulla rerum debitis.
+      </p>
+    </section>
+    <section id="skills">
+      <p class="section__title">Skills</p>
+      <div class="skills__list">
+        <div class="skills__kind">
+          <p class="section__sub-title">Front-end</p>
+          <div class="skill">
+            <p class="skill__name">react</p>
+            <p class="skill__desctipion">context API ,Redux ,...</p>
+          </div>
+          <div class="skill">
+            <p class="skill__name">react</p>
+            <p class="skill__desctipion">context API ,Redux ,...</p>
+          </div>
+          <div class="skill">
+            <p class="skill__name">react</p>
+            <p class="skill__desctipion">context API ,Redux ,...</p>
+          </div>
+          <div class="skill">
+            <p class="skill__name">react</p>
+            <p class="skill__desctipion">context API ,Redux ,...</p>
+          </div>
+        </div>
+        <div class="skills__kind">
+          <p class="section__sub-title">Back-end</p>
+          <div class="skill">
+            <p class="skill__name">react</p>
+            <p class="skill__desctipion">context API ,Redux ,...</p>
+          </div>
+          <div class="skill">
+            <p class="skill__name">react</p>
+            <p class="skill__desctipion">context API ,Redux ,...</p>
+          </div>
+          <div class="skill">
+            <p class="skill__name">react</p>
+            <p class="skill__desctipion">context API ,Redux ,...</p>
+          </div>
+          <div class="skill">
+            <p class="skill__name">react</p>
+            <p class="skill__desctipion">context API ,Redux ,...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="work">
+      <p class="section__title">Work</p>
+      <div class="work__list">
+        <div class="work__item">
+          <div class="work__company">
+            <img class="compay__logo" />
+            <p class="company__name">Wegooli</p>
+          </div>
+          <p class="company__date">2021 ~ 2022</p>
+            <div class="company__project-list">
+              <div class="company__project">
+                <p class="company__project-title">위굴리 앱</p>
+                <div class="company__project-conent">
+                  <p >Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <p >Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+              </div>
+              <div class="company__project">
+                <p class="company__project-title">위굴리 앱</p>
+                <div class="company__project-conent">
+                  <p >Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <p >Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+              </div>
+          </div>
+      </div>
+    </section>
+    <section id="projects">
+      <p class="section__title">Projects</p>
+      <div>
+        <p class="projects__kinds">
+          Web
+        </p>
+        <p class="projects__kinds">
+          Mobile
+        </p>
+      </div>
+      <div class="project__list--btn">
+        <button class="project__name">유튜브 클론</button>
+        <button class="project__name">파리잡기</button>
+        <button class="project__name">포트폴리오</button>
+      </div>
+      <div class="project__info">
+        <p class="project__title">유튜브 클론</p>
+        <p class="project__date">2022.01 ~ 2022.02</p>
+        <p class="project__description">진행인원 : 1명 <br>유튜브를 클론한 프로젝트 입니다.</p>
+        <div class="prject__thumbnails">
+          <img src="">
+          <img src="">
+          <img src="">
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <p class="section__title">Thank you!</p>
+      <div class="contact__list">
+      <p class="contact__item">Git </p>
+      <p class="contact__item">www.naver.com </p>
+
+    </div>
+    <div class="contact__list">
+      <p class="contact__item">Git </p>
+      <p class="contact__item">www.naver.com </p>
+
+    </div>
+    </section>
   </body>
 </html>
