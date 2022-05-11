@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/e8993391fb.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/e8993391fb.js" crossorigin="anonymous"></script> -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
     <script defer src="main.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>uuyeong's portfolio</title>
@@ -15,128 +15,144 @@
     <meta name="author" content="uuyeong" />
   </head>
   <body>
-    <section id="home">
+    <section id="home" class="sections">
       <header class="head">
-        <p class="head__title">uuyeong</p>      
+        <div class="head__container">
+        <p class="head__title">UUYEONG</p>      
         <nav class="navbar">
           <ul>
-            <li class="navbar__item active">Home<a href=""></a></li>
-            <li class="navbar__item">About<a href=""></a></li>
-            <li class="navbar__item">Skill<a href=""></a></li>
-            <li class="navbar__item">Career<a href=""></a></li>
-            <li class="navbar__item">Projects<a href=""></a></li>
-            <li class="navbar__item">Contact<a href=""></a></li>
+            <li class="navbar__item"  data-nav-id="home" >Home<a href=""></a></li>
+            <li class="navbar__item" data-nav-id="about">About<a href=""></a></li>
+            <li class="navbar__item" data-nav-id="skills">Skills<a href=""></a></li>
+            <li class="navbar__item" data-nav-id="projects">Projects<a href=""></a></li>
+            <li class="navbar__item" data-nav-id="career">Career<a href=""></a></li>
+            <li class="navbar__item" data-nav-id="career">Contact<a href=""></a></li>
+
           </ul>
         </nav>
+      </div>
       </header>
-      <div class="home__user section__container">
-        <img class="home__user-img" src="/assets/images/people1.jpg"home__user-img" />
-        <div class="home__user-info">
-          <p class="home__hello section__title">성장하는 개발자<br/> 조우영입니다.</p>
-          <p class="home__user-name section__sub-title">Front-end developer</p>
-          <div class="home__user-detail">
-            <p class="section__content"><span class="info__title">이메일  </span>  www.naver.com</p>
-            <p class="section__content"><span class="info__title">연락처 </span> 010 - 0000 - 0000</p>
-            <p class="section__content"><span class="info__title">Git</span>   www.naver.com</p>
-          </div>
+      <div class="home__user ">
+        <img class="home__user-img" src="/assets/images/user.svg" />
+        <div class="user__info ">
+          <p class="user__hello">안녕하세요!</p>
+          <p class="user__introduce ">프론트엔드 개발자 <br/>조우영입니다.</p>
+           <button  class="user__btn">Contact Me</button>
         </div>
       </div>
     </section>
-    <section id="about" class="section__container">
+    <section id="about" class="section__container  sections" >
       <div class="container--inner">
-      <p class="section__title">About Me</p>
-      <p class="section__sub-title">안녕하세요!</p>
-      <p class="section__content">
-        앱,웹 프론트엔드 업무와 백엔드 업무를 통해 개발자로서 경험을 쌓았습니다. Java, Spring Framecareer, TypeScript ,React-native등의 기술을 통해 서비스를 개발하고 운영한 경험이 있습니다.
-        <br/>단순 개발만이 아닌 업무에 대한 이해도를 높여 고객만족도를 높이고 지속적인 기술 개발을 통해 경쟁력을 키워나가고 있습니다. 어떠한 변화에도 빠르게 적응하는 능력을 갖춘 끊임없이 성장하는 개발자가 되겠습니다.
+        <p class="section__title">About</p>
+      <p class="about__title">"늘 발전하는 개발자 조우영입니다." </p>
+      <p class="about__content section__content">
+        경영학도로 시작하였지만 개발에 큰 매력을 느끼고 개발자로서 꿈을 꾸게되었습니다. 늦었다 생각한 만큼 열심히 
+        앱,웹 프론트엔드 업무와 백엔드 업무를 통해 많은 지식과 경험을 쌓아오고 있습니다.
+       단순 개발만이 아닌 업무에 대한 이해도를 높여 고객만족도를 높이고 지속적인 기술 개발을 통해 경쟁력을 키워나가고 싶습니다. 어떠한 변화에도 빠르게 적응하는 능력을 갖춘 끊임없이 성장하는 개발자가 되겠습니다.
       </p>
       </div>
     </section>
-    <section id="skills" class="section__container">
+    <section id="skills" class="section__container sections">
       <div class="container--inner">
-      <p class="section__title">Skill</p>
+      <p class="section__title">Skills</p>
       <div class="skills__list">
         <div class="skill__container">
-          <p class="section__sub-title skills__develop-kind">Front-end</p>
+          <!-- <p class="section__sub-title skills__develop-kind">Front-end</p> -->
           <div class="skill__items">
             <div class="skill">
-              <p class="skill__name">HTML5, CSS</p>
-              <p class="skill__desctipion"></p>
+              <p class="skill__name section__content">HTML5</p>
             </div>
             <div class="skill">
-              <p class="skill__name">JavsScript</p>
+              <p class="skill__name section__content">CSS3</p>
+            </div>
+            <div class="skill">
+              <p class="skill__name section__content">JavsScript</p>
               <p class="skill__desctipion">ES6</p>
             </div>
             <div class="skill">
-              <p class="skill__name">TypeScript</p>
-              <p class="skill__desctipion"></p>
+              <p class="skill__name section__content">TypeScript</p>
             </div>
             <div class="skill">
-              <p class="skill__name">React</p>
-              <p class="skill__desctipion">context API, Redux <p>
+              <p class="skill__name section__content">React</p>
+              <p class="skill__desctipion">context API </p>
+              <p class="skill__desctipion">Redux </p>
             </div>
             <div class="skill">
-              <p class="skill__name">React Native</p>
-              <p class="skill__desctipion">context API, Redux ,firebase<p>
+              <p class="skill__name section__content">React Native</p>
+              <p class="skill__desctipion">context API </p>
+
+                <p class="skill__desctipion">Redux</p>
+              <p class="skill__desctipion">firebase</p>
             </div>
+            <div class="skill">
+              <p class="skill__name section__content">Java</p>
+            </div>
+            <div class="skill">
+              <p class="skill__name section__content">DataBase</p>
+              <p class="skill__desctipion ">Oracle</p>
+              <p class="skill__desctipion ">DB2</p>
+
           </div>
-        </div>
-          <div class="skill__container">
-            <p class="section__sub-title skills__develop-kind">Back-end</p>
-            <div class="skill__items">
-              <div class="skill">
-                <p class="skill__name">Java</p>
-                <p class="skill__desctipion"></p>
-              </div>
-            </div>
+          <div class="skill">
+            <p class="skill__name section__content">R</p>
           </div>
-          <div class="skill__container">
-            <p class="section__sub-title skills__develop-kind">Etc</p>
-            <div class="skill__items">
-              <div class="skill">
-                <p class="skill__name">DataBase</p>
-                <p class="skill__desctipion">DB2, Oracle</p>
-            </div>
-            <div class="skill">
-              <p class="skill__name">R</p>
-              <p class="skill__desctipion"></p>
-            </div>
           </div>
         </div>
       </div>
       </div>
     </section>
    
-    <section id="projects" class="section__container">
+    <section id="projects" class="section__container sections">
       <div class="container--inner">
-    
       <p class="section__title">Projects</p>
-      <div>
-        <p class="projects__kinds">
-          Web
-        </p>
-        <p class="projects__kinds">
-          Mobile
-        </p>
-      </div>
-      <div class="project__list--btn">
-        <button class="project__name">유튜브 클론</button>
-        <button class="project__name">파리잡기</button>
-        <button class="project__name">포트폴리오</button>
-      </div>
-      <div class="project__info">
-        <p class="project__title">유튜브 클론</p>
-        <p class="project__date">2022.01 ~ 2022.02</p>
-        <p class="project__description">진행인원 : 1명 <br>유튜브를 클론한 프로젝트 입니다.</p>
-        <div class="prject__thumbnails">
-          <img src="">
-          <img src="">
-          <img src="">
+      <div class="project__container">
+        <div class="project">
+          <img class= "project__img" src="/assets/images/portfolio/portfolio_carrot.png">
+          
+          <p class="project__type">개인 프로젝트</p>
+          <div class="project__info">
+            <p class="project__title">ToDo List</p>
+            <p class="project__period">22.03.02 ~ 22.03.04</p>
+          </div>
+          <p class="project__description">유튜브를 클론한 프로젝트 입니다. 유튜브 모바일 화면을 참고하여 작업하였으며 기본 태그를 복습하였습니다.</p>
+          <div class="link-btns">
+            <button class="link-btn__source">Source</button>
+            <button class="link-btn__demo">Demo</button>
+
+          </div>
+        </div>
+        <div class="project">
+          <img class= "project__img" src="/assets/images/portfolio/portfolio_todo.png">
+          <p class="project__type">개인 프로젝트</p>
+          <div class="project__info">
+            <p class="project__title">ToDo List</p>
+            <p class="project__period">22.03.02 ~ 22.03.04</p>
+          </div>
+          <p class="project__description">할일을 기록할 수 있는 Todo리스트 입니다. 날짜를 선택하여 해당 날짜에 할일을 기록하거나 다른 날짜를 선택하여 기록을 조회,수정할 수 있습니다.</p>
+          <div class="link-btns">
+            <button class="link-btn__source">Source</button>
+            <button class="link-btn__demo">Demo</button>
+          </div>
+        </div>
+        </img>
+        <div class="project">
+          <img class= "project__img" src="/assets/images/portfolio/portfolio_todo.png">
+          <p class="project__type">개인 프로젝트</p>
+          <div class="project__info">
+          <p class="project__title">ToDo List</p>
+          <p class="project__period">22.03.02 ~ 22.03.04</p>
+        </div>
+
+          <p class="project__description">할일을 기록할 수 있는 Todo리스트 입니다. 날짜를 선택하여 해당 날짜에 할일을 기록하거나 다른 날짜를 선택하여 기록을 조회,수정할 수 있습니다.</p>
+          <div class="link-btns">
+            <button class="link-btn__source">Source</button>
+            <button class="link-btn__demo">Demo</button>
+          </div>
+        </div>
         </div>
       </div>
-      </div>
     </section>
-    <section id="career" class="section__container">
+    <section id="career" class="section__container sections">
       <div class="container--inner">
       <p class="section__title">Career</p>
       <div class="career__list">
