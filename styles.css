@@ -1,9 +1,9 @@
 /*  Global varible*/
 :root {
   /* font-size */
-  --font-size-xlarge: 8em;
-  --font-size-large: 3em;
-  --font-size-medium: 2em;
+  --font-size-xlarge: 6em;
+  --font-size-large: 3.5em;
+  --font-size-medium: 1.8em;
   --font-size-small: 1em;
   --font-size-xsmall: 0.9em;
 
@@ -25,7 +25,7 @@
   --base-size-small: 15px;
   --base-size-medium: 20px;
   --base-size-large: 30px;
-  --base-size-xlarge: 50px;
+  --base-size-xlarge: 70px;
 
   /* Font weight */
   --weight-bold: 700;
@@ -75,7 +75,7 @@ li {
 .section__title {
   font-size: var(--font-size-large);
   font-weight: var(--weight-bold);
-  padding-bottom: var(--base-size-medium);
+  padding-bottom: var(--base-size-large);
 }
 .section__sub-title {
   font-size: var(--font-size-medium);
@@ -85,8 +85,8 @@ li {
 .section__content {
   font-size: var(--font-size-small);
   padding-bottom: calc(var(--base-size-xsmall));
-  line-height: 30px;
   text-align: left;
+  letter-spacing: 0.5px;
 }
 
 /* header */
@@ -100,18 +100,20 @@ li {
   display: flex;
   justify-content: space-between;
   padding: var(--base-size-medium);
+  position: relative;
+  background-color: var(--color-main-blue);
 }
 .head .head__title {
   font-family: "Rajdhani", sans-serif;
   font-weight: var(--weight-bold);
   font-size: var(--font-size-medium);
 }
-
-.head .navbar > ul {
+.head .navbar .navbar__list {
   display: flex;
   font-weight: var(--weight-bold);
   font-size: var(--font-size-small);
   cursor: pointer;
+  z-index: 1;
 }
 
 .head .navbar .navbar__item {
@@ -139,6 +141,15 @@ li {
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
+/* mini-size navbar */
+.navbar__toggle-btn {
+  display: none;
+  font-size: var(--font-size-medium);
+  position: absolute;
+  top: var(--base-size-medium);
+  right: var(--base-size-medium);
+}
+
 /* home */
 #home {
   background-color: var(--color-main-blue);
@@ -149,9 +160,10 @@ li {
   display: flex;
   align-items: center;
   font-weight: bold;
-  max-width: 90%;
   margin: auto;
   padding-top: 80px;
+  max-width: 1200px;
+  gap: var(--base-size-medium);
 }
 .home__user .home__user-img {
   /* header size 80px 제외 */
@@ -181,9 +193,12 @@ li {
 
 /* about */
 #about .about__title {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-medium);
   font-weight: var(--weight-bold);
   padding-bottom: var(--base-size-small);
+}
+#about .about__content {
+  font-size: var(--font-size-small);
 }
 
 /* skills */
@@ -194,10 +209,14 @@ li {
 #skills .skills__list {
   display: flex;
 }
+#skills .skill {
+  margin-bottom: var(--base-size-small);
+}
 #skills .skill__name {
   display: inline-block;
   font-weight: var(--weight-semi-bold);
   margin-right: var(--base-size-xsmall);
+  padding-bottom: var(--base-size-xsmall);
 }
 #skills .skill__desctipion::before {
   content: "#";
@@ -208,9 +227,12 @@ li {
   display: inline-block;
   padding: var(--base-size-xsmall);
   border-radius: var(--border-radius-size);
-  margin-left: var(--base-size-xsmall);
+  margin-right: var(--base-size-xsmall);
 }
 
+#skills .skill__descriptions {
+  display: inline-block;
+}
 /* project */
 #projects {
   border-top: 10px solid var(--color-gray-white);
@@ -220,29 +242,32 @@ li {
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
+  gap: var(--base-size-large);
+  transition: all 400ms ease;
 }
 
 .project {
-  width: 320px;
+  width: 350px;
   position: relative;
   text-align: left;
   /* paddingbottom : button space 45 (btn 30 + padding 15) */
   padding: var(--base-size-medium) var(--base-size-medium) 65px
     var(--base-size-medium);
-  margin: var(--base-size-medium);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: var(--border-radius-size);
+  transition: transform 300ms ease;
 }
-
+.project:hover {
+  transform: scale(1.1);
+}
 .project__img {
-  height: 220px;
+  height: 200px;
   width: 100%;
   object-fit: cover;
   border-radius: var(--border-radius-size);
   padding-bottom: var(--base-size-xsmall);
 }
 .project__info {
-  display: flex;
   padding-bottom: var(--base-size-xsmall);
 }
 .project__info .project__title {
@@ -255,13 +280,13 @@ li {
   color: var(--color-light-gray);
 }
 .project__type {
-  font-size: var(--font-xsmall);
-  font-weight: var(--weight-semi-bold);
+  font-size: var(--font-size-xsmall);
   padding-bottom: var(--base-size-xsmall);
+  color: gray;
 }
 
 .project__description {
-  font-size: var(--font-xsmall);
+  font-size: var(--font-size-xsmall);
 }
 .link-btns {
   text-align: center;
@@ -293,32 +318,35 @@ li {
 .company__container {
   display: flex;
   align-items: flex-start;
-  font-size: var(--font-small);
 }
 .career__list {
   text-align: left;
 }
 .company__container > i {
-  padding-top: 5px;
+  padding-top: 10px;
+  font-size: var(--font-size-medium);
 }
 
 .company__info {
   padding-left: var(--base-size-xsmall);
 }
 .company__name {
+  font-weight: var(--weight-bold);
+  font-size: var(--font-size-medium);
+
   text-transform: uppercase;
   font-weight: var(--weight-semi-bold);
 }
 .company__date {
-  font-size: var(--base-size-xsmall);
+  font-size: var(--font-size-small);
   color: var(--color-dark-gray);
 }
 .company__project {
-  padding: var(--base-size-small) var(--base-size-xsmall);
+  padding: var(--base-size-small) var(--base-size-large);
 }
 
 .company__project-title {
-  font-size: var(--font-small);
+  font-size: var(--font-size-medium);
   font-weight: var(--weight-semi-bold);
   padding-bottom: var(--base-size-xsmall);
 }
@@ -334,12 +362,78 @@ li {
   background-color: var(--color-main-blue);
   text-align: center;
   color: var(--color-blue);
-  padding: 50px;
-  border: 2px solid red;
   padding: var(--base-size-xlarge);
 }
 
-#contact .contact__list p {
-  display: inline-block;
+#contact .contact__item {
   padding-left: var(--base-size-small);
+  font-size: var(--font-size-small);
+  display: flex;
+  justify-content: center;
+  gap: var(--base-size-xsmall);
+  padding-top: var(--base-size-small);
+}
+
+@media screen and (max-width: 768px) {
+  .section__title {
+    font-size: var(--font-size-medium);
+  }
+  .head .navbar .navbar__list {
+    display: none;
+  }
+  .head .navbar .navbar__list.spread {
+    display: inline;
+    text-align: center;
+  }
+  .head__container {
+    flex-direction: column;
+    z-index: 1;
+  }
+
+  /* mini-size navbar */
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  /* header */
+  .head {
+    height: 60px;
+  }
+
+  .head .head__title {
+    font-size: var(--font-size-medium);
+  }
+
+  .home__user {
+    padding: 70px 0 50px 0;
+  }
+  .home__user .home__user-img {
+    display: none;
+  }
+  .home__user .user__hello {
+    font-size: var(--font-size-large);
+  }
+  .home__user .user__info {
+    max-width: 90%;
+  }
+  .home__user .user__introduce {
+    font-size: var(--font-size-medium);
+  }
+
+  #about .about__title {
+    font-size: var(--font-size-small);
+  }
+
+  /* skills */
+
+  .skill {
+  }
+  #skills .skill__desctipion {
+    font-size: 10px;
+  }
+
+  /* career */
+  .company__project-title {
+    font-size: var(--font-size-small);
+  }
 }
