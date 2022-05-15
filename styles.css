@@ -406,6 +406,8 @@ li {
 
   .home__user {
     padding: 70px 0 50px 0;
+    margin: auto;
+    text-align: center;
   }
   .home__user .home__user-img {
     display: none;
