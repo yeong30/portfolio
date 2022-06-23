@@ -4,7 +4,7 @@
   --font-size-xlarge: 6em;
   --font-size-large: 3.5em;
   --font-size-medium: 1.8em;
-  --font-size-small: 1em;
+  --font-size-small: 1.3em;
   --font-size-xsmall: 0.9em;
 
   /* colors */
@@ -287,6 +287,7 @@ li {
 
 .project__description {
   font-size: var(--font-size-xsmall);
+  line-height: var(--font-size-medium);
 }
 .link-btns {
   text-align: center;
@@ -310,8 +311,8 @@ li {
 .link-btn__source {
   margin-right: var(--base-size-large);
 }
-/* career */
-#career {
+/* Expreiend */
+#experience {
   border-top: 10px solid var(--color-gray-white);
   background-color: var(--color);
 }
@@ -319,7 +320,7 @@ li {
   display: flex;
   align-items: flex-start;
 }
-.career__list {
+.experience__list {
   text-align: left;
 }
 .company__container > i {
@@ -338,7 +339,7 @@ li {
   font-weight: var(--weight-semi-bold);
 }
 .company__date {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-xsmall);
   color: var(--color-dark-gray);
 }
 .company__project {
@@ -346,7 +347,7 @@ li {
 }
 
 .company__project-title {
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-small);
   font-weight: var(--weight-semi-bold);
   padding-bottom: var(--base-size-xsmall);
 }
@@ -373,6 +374,10 @@ li {
   gap: var(--base-size-xsmall);
   padding-top: var(--base-size-small);
 }
+.contact__addr {
+  text-decoration: none;
+  color: black;
+}
 
 @media screen and (max-width: 768px) {
   .section__title {
@@ -380,10 +385,16 @@ li {
   }
   .head .navbar .navbar__list {
     display: none;
+    text-align: center;
+    margin: auto;
   }
   .head .navbar .navbar__list.spread {
     display: inline;
     text-align: center;
+  }
+  .head .navbar .navbar__item {
+    width: 40%;
+    margin: auto;
   }
   .head__container {
     flex-direction: column;
@@ -434,7 +445,7 @@ li {
     font-size: 10px;
   }
 
-  /* career */
+  /* experience */
   .company__project-title {
     font-size: var(--font-size-small);
   }
