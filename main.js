@@ -1,20 +1,22 @@
-// header observer
-// header가 skills와 observ되는 순간 스타일을 변경한다.
 const header = document.querySelector(".head");
 const sections = document.querySelectorAll(".sections");
 const navbarList = document.querySelector(".navbar__list");
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+const contactMeBtn = document.querySelector(".contact-me__btn");
 const navIds = [];
+
+//대상이 되는 section의 id를 navIds로 저장.
 sections.forEach((section) => {
-  console.log(section.id);
   navIds.push(section.id);
 });
 (section) => section.id;
 let headerOptions = {
   rootMargin: "0px",
-  threshold: 0.6,
+  threshold: 0.5,
 };
 let activeNav = undefined;
+
+// 현재 view에서 벗어나는 section의 다음 /이전 section의 index를 저장
 const observer = new IntersectionObserver((entries) => {
   if (entries.length === navIds.length) {
     activeNavItem(navIds[0]);
@@ -46,11 +48,8 @@ function activeNavItem(target) {
   activeNav = navItem;
 }
 
-// 상단에 닿으면 Home 활성화 + nav메뉴 스타일 변경
-// let flagH =
-//   sections[0].getBoundingClientRect().height -
-//   header.getBoundingClientRect().height;
-
+// header observer
+// header가 skills와 observ되는 순간 스타일을 변경
 window.addEventListener("scroll", (e) => {
   const WINDOW_HEIGHT = window.innerHeight;
   const DOC_TOTAL_HEIGHT = document.body.offsetHeight;
@@ -58,7 +57,7 @@ window.addEventListener("scroll", (e) => {
   let y = window.scrollY;
   if (y === 0) {
     activeNavItem(navIds[0]);
-  } else if (y + WINDOW_HEIGHT >= DOC_TOTAL_HEIGHT) {
+  } else if (y + WINDOW_HEIGHT >= DOC_TOTAL_HEIGHT - 5) {
     activeNavItem(navIds[navIds.length - 1]);
   }
 
@@ -70,13 +69,26 @@ window.addEventListener("scroll", (e) => {
 navbarList.addEventListener("click", (e) => {
   if (e.target.tagName === "LI") {
     const selectedMenu = e.target.dataset.navId;
-    const selectedIdx = navIds.indexOf(selectedMenu);
-    sections[selectedIdx]?.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
+    scrollToSection(selectedMenu);
   }
 });
+// scoll to section
+navbarList.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    const selectedMenu = e.target.dataset.navId;
+    scrollToSection(selectedMenu);
+  }
+});
+contactMeBtn.addEventListener("click", (e) => {
+  scrollToSection("contact");
+});
+function scrollToSection(selectedMenu) {
+  const selectedIdx = navIds.indexOf(selectedMenu);
+  sections[selectedIdx]?.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+  });
+}
 navbarToggleBtn.addEventListener("click", (e) => {
   navbarList.classList.toggle("spread");
 });
