@@ -25,7 +25,7 @@
             <li class="navbar__item" data-nav-id="about">About</li>
             <li class="navbar__item" data-nav-id="skills">Skills</li>
             <li class="navbar__item"  data-nav-id="projects">Projects</li>
-            <li class="navbar__item" data-nav-id="career">Career</li>
+            <li class="navbar__item" data-nav-id="experience">Experience</li>
             <li class="navbar__item" data-nav-id="contact">Contact</li>
           </ul>
             <button class="navbar__toggle-btn">
@@ -37,9 +37,9 @@
       <div class="home__user ">
         <img class="home__user-img" src="./assets/images/user.svg" />
         <div class="user__info ">
-          <p class="user__hello">안녕하세요!</p>å
+          <p class="user__hello">안녕하세요!</p>
           <p class="user__introduce ">프론트엔드 개발자 <br/>조우영입니다.</p>
-           <button  class="user__btn">Contact Me</button>
+           <button  class="user__btn contact-me__btn">Contact Me</button>
         </div>
       </div>
     </section>
@@ -48,12 +48,9 @@
         <p class="section__title">About</p>
       <p class="about__title">"늘 발전하는 개발자 조우영입니다." </p>
       <p class="about__content section__content">
-        경영학도로 시작하였지만 개발에 큰 매력을 느끼고 개발자로서 꿈을 꾸게되었습니다. 늦었다 생각한 만큼 열심히 
-        앱,웹 프론트엔드 업무와 백엔드 업무를 통해 많은 지식과 경험을 쌓아오고 있습니다.
-       단순 개발만이 아닌 업무에 대한 이해도를 높여 고객만족도를 높이고 지속적인 기술 개발을 통해 경쟁력을 키워나가고 싶습니다. 어떠한 변화에도 빠르게 적응하는 능력을 갖춘 끊임없이 성장하는 개발자가 되겠습니다.
-   경영학도로 시작하였지만 개발에 큰 매력을 느끼고 개발자로서 꿈을 꾸게되었습니다. 늦었다 생각한 만큼 열심히 
-      앱,웹 프론트엔드 업무와 백엔드 업무를 통해 많은 지식과 경험을 쌓아오고 있습니다.
-     단순 개발만이 아닌 업무에 대한 이해도를 높여 고객만족도를 높이고 지속적인 기술 개발을 통해 경쟁력을 키워나가고 싶습니다. 어떠한 변화에도 빠르게 적응하는 능력을 갖춘 끊임없이 성장하는 개발자가 되겠습니다.
+        경영학도로 시작하였지만 개발에 큰 매력을 느끼고 개발자로서 꿈을 꾸게되었습니다.<br/> 늦었다 생각한 만큼 열심히 달리며 목표에 도달하기 위해 노력하고 있습니다.<br/>
+       단순 개발만이 아닌 업무에 대한 이해도를 높여 고객만족도를 높이고 지속적인 기술 개발을 통해 경쟁력을 키워나가고 싶습니다. <br/>끊임없이 성장하는 개발자가 되겠습니다.
+  
       </div>
     </section>
     <section id="skills" class="section__container sections">
@@ -101,13 +98,10 @@
               <p class="skill__name section__content">DataBase</p>
               <div class="skill__descriptions">
                   <p class="skill__desctipion ">Oracle</p>
-                  <p class="skill__desctipion ">DB2</p>
               </div>
 
           </div>
-          <div class="skill">
-            <p class="skill__name section__content">R</p>
-          </div>
+     
           </div>
         </div>
       </div>
@@ -119,58 +113,61 @@
       <p class="section__title">Projects</p>
       <div class="project__container">
         <div class="project">
-          <img class= "project__img" src="/assets/images/portfolio/portfolio_todo.png"/>
+          <img class= "project__img" src="/assets/images/portfolio/portfolioProject_img.png"/>
           <p class="project__type">개인 프로젝트</p>
           <div class="project__info">
             <p class="project__title">uuyeong's portfolio</p>
             <p class="project__period">22.02.02 ~ 22.04.04</p>
           </div>
-          <p class="project__description">개발자 조우영에 대해 소개하는 포트폴리오 웹페이지입니다. 필요애 따라 계속해서 업데이트하며 개발자 조우영을 채워나가고 있습니다.</p>
+          <p class="project__description">개발자 조우영에 대해 소개하는 포트폴리오 웹페이지입니다. 지속적으로 업데이트하며 개발자 조우영을 채워나가고 있습니다. <br/>기술스택 :  HTML, CSS, Vanilla JS </p>
           <div class="link-btns">
-            <button class="link-btn__source">Source</button>
-            <button class="link-btn__demo">Demo</button>
+            <button   type="button" onclick="window.open('https://github.com/yeong30/portfolio')" class="link-btn__source">Source</button>
           </div>
         </div>
         <div class="project">
-          <img class= "project__img" src="/assets/images/portfolio/portfolio_todo.png"/>
+          <img class= "project__img" src="/assets/images/portfolio/todoProject_img.png"/>
           <p class="project__type">개인 프로젝트</p>
           <div class="project__info">
             <p class="project__title">ToDo List</p>
-            <p class="project__period">22.03.02 ~ 22.03.04</p>
+            <p class="project__period">22.04.02 ~ 22.04.30</p>
           </div>
-          <p class="project__description">할일을 기록할 수 있는 Todo리스트 입니다. 날짜를 선택하여 해당 날짜에 할일을 기록하거나 다른 날짜를 선택하여 기록을 조회,수정할 수 있습니다.</p>
+          <p class="project__description">날짜를 선택하여 할일을 기록할 수 있는 Todo List 입니다. <br/>기술스택 : HTML, CSS, Vanilla JS, Node.js, firebase Realtime Database</p>
           <div class="link-btns">
-            <button class="link-btn__source">Source</button>
-            <button class="link-btn__demo">Demo</button>
+            <button  type="button" onclick="window.open('https://github.com/yeong30/todo-client')" class="link-btn__source">Source</button>
+            <button type="button" onclick="window.open('https://yeong30.github.io/todo-client/')"  class="link-btn__demo">Demo</button>
           </div>
         </div>
-        <!-- <div class="project">
-          <img class= "project__img" src="/assets/images/portfolio/portfolio_todo.png"/>
+
+        <div class="project">
+          <img class= "project__img" src="/assets/images/portfolio/gardenerProject_img.png"/>
           <p class="project__type">개인 프로젝트</p>
           <div class="project__info">
-          <p class="project__title">ToDo List</p>
-          <p class="project__period">22.03.02 ~ 22.03.04</p>
-        </div>
-          <p class="project__description">할일을 기록할 수 있는 Todo리스트 입니다. 날짜를 선택하여 해당 날짜에 할일을 기록하거나 다른 날짜를 선택하여 기록을 조회,수정할 수 있습니다.</p>
+            <p class="project__title">ToDo List</p>
+            <p class="project__period">22.06.13 ~ 22.06.23</p>
+          </div>
+          <p class="project__description">가드너를 위한 식물 정보 조회 웹입니다. <br/>기술스택 : React, Redux, CSS(CSS-module), firebase Realtime Database</p>
           <div class="link-btns">
-            <button class="link-btn__source">Source</button>
-            <button class="link-btn__demo">Demo</button>
+            <button  type="button" onclick="window.open('https://github.com/ImGardener/client')" class="link-btn__source">Source</button>
+            <button type="button" onclick="window.open('https://imgardener.netlify.app/')"  class="link-btn__demo">Demo</button>
           </div>
         </div>
-        </div>
-      </div> -->
+      
     </section>
-    <section id="career" class="section__container sections">
+    <section id="experience" class="section__container sections">
       <div class="container--inner">
-      <p class="section__title">Career</p>
-      <div class="career__list">
-        <div class="career__item">
+      <p class="section__title">Experience</p>
+      <div class="experience__list">
+        <div class="cexperience__item">
           <div class="company__container">
-            <i class="fa fa-solid fa-building"></i>
             <div class="company__info">
-              <p class="company__name">위굴리 </p>
+              <p class="company__name">위굴리 
+            <i class="fa fa-solid fa-building"></i>
+
+
+              </p>
               <p class="company__date">2020.09 ~ 2022.01</p>
             </div>
+
           </div>
             <div class="company__project-list">
               <div class="company__project">
@@ -192,7 +189,7 @@
                 <p class="company__project-title">위굴리 운영웹 서비스 개발 및 유지보수 </p>
                 <p class="company__date">2021.11 ~ 2022.01</p>
                 <div class="company__project-conent">
-                  <p>운영웹 쿠폰 및 상품 서비스 개발 참여 및 유지보수 </p>
+                  <p>쿠폰 및 상품 서비스 개발 참여 및 유지보수 </p>
                 </div>
               </div>
           </div>
@@ -207,14 +204,18 @@
           <i class="fa-brands fa-github"></i>
           <span class="info__title"> Github : </span>
         </div>
-        <p class="contact__addr">github.com/right00730</p>
+          <a  class="contact__addr" href=" https://github.com/yeong30">
+            github.com/yeong30
+          </a>
      </div>
     <div class="contact__item">
       <div class="contact__type">
         <i class="fa-brands fa-blogger-b"></i>
         <span class="info__title">blog : </span>
       </div>
-      <p class="contact__addr">velog.io/@pro-yeong</p>
+      <a  class="contact__addr" href="https://velog.io/@pro-yeong">
+        velog.io/@pro-yeong
+      </a>
     </div>
     </div>
     </section>
