@@ -23,8 +23,8 @@
           <ul class="navbar__list">
             <li class="navbar__item"  data-nav-id="home" >Home</li>
             <li class="navbar__item" data-nav-id="about">About</li>
-            <li class="navbar__item" data-nav-id="skills">Skills</li>
             <li class="navbar__item"  data-nav-id="projects">Projects</li>
+            <li class="navbar__item" data-nav-id="skills">Skills</li>
             <li class="navbar__item" data-nav-id="experience">Experience</li>
             <li class="navbar__item" data-nav-id="contact">Contact</li>
           </ul>
@@ -56,6 +56,54 @@
         
       </div>
     </section>
+
+    <section id="projects" class="section__container sections">
+      <div class="container--inner">
+      <p class="section__title">Projects</p>
+      <div class="project__container">
+        <div class="project">
+          <img class= "project__img" src="./assets/images/portfolio/portfolioProject_img.png"/>
+          <p class="project__type">개인 프로젝트</p>
+          <div class="project__info">
+            <p class="project__title"> 포트폴리오 웹페이지</p>
+            <p class="project__period">22.02.02 ~ </p>
+          </div>
+          <p class="project__description">개발자 조우영에 대해 소개하는 포트폴리오 웹페이지입니다. 지속적으로 업데이트하며 개발자 조우영을 채워나가고 있습니다. <br/>기술스택 :  HTML, CSS, Vanilla JS </p>
+          <div class="link-btns">
+            <button   type="button" onclick="window.open('https://github.com/yeong30/portfolio')" class="link-btn__source">Source</button>
+          </div>
+        </div>
+        <div class="project">
+          <img class= "project__img" src="./assets/images/portfolio/todoProject_img.png"/>
+          <p class="project__type">개인 프로젝트</p>
+          <div class="project__info">
+            <p class="project__title">ToDo List</p>
+            <p class="project__period">22.04.02 ~ 22.05.30</p>
+          </div>
+          <p class="project__description">날짜를 선택하여 할일을 기록할 수 있는 Todo List 입니다. <br/>기술스택 : HTML, CSS, Vanilla JS, Node.js, firebase Realtime Database</p>
+          <div class="link-btns">
+            <button  type="button" onclick="window.open('https://github.com/yeong30/todo-client')" class="link-btn__source">Source</button>
+            <button type="button" onclick="window.open('https://yeong30.github.io/todo-client/')"  class="link-btn__demo">Demo</button>
+          </div>
+        </div>
+
+        <div class="project">
+          <img class= "project__img" src="./assets/images/portfolio/gardenerProject_img.png"/>
+          <p class="project__type">개인 프로젝트</p>
+          <div class="project__info">
+            <p class="project__title">ImGardener</p>
+            <p class="project__period">22.06.13 ~ 22.06.23</p>
+          </div>
+          <p class="project__description">가드너를 위한 식물 정보 조회 웹입니다. <br/>기술스택 : React, Redux,Redux-thunk, CSS(CSS-module), firebase Realtime Database, Authentication
+          </p>
+          <div class="link-btns">
+            <button  type="button" onclick="window.open('https://github.com/ImGardener/client')" class="link-btn__source">Source</button>
+            <button type="button" onclick="window.open('https://imgardener.netlify.app/')"  class="link-btn__demo">Demo</button>
+          </div>
+        </div>
+      
+    </section>
+
     <section id="skills" class="section__container sections">
       <div class="container--inner">
       <p class="section__title">Skills</p>
@@ -111,52 +159,6 @@
       </div>
     </section>
    
-    <section id="projects" class="section__container sections">
-      <div class="container--inner">
-      <p class="section__title">Projects</p>
-      <div class="project__container">
-        <div class="project">
-          <img class= "project__img" src="./assets/images/portfolio/portfolioProject_img.png"/>
-          <p class="project__type">개인 프로젝트</p>
-          <div class="project__info">
-            <p class="project__title"> 포트폴리오 웹페이지</p>
-            <p class="project__period">22.02.02 ~ </p>
-          </div>
-          <p class="project__description">개발자 조우영에 대해 소개하는 포트폴리오 웹페이지입니다. 지속적으로 업데이트하며 개발자 조우영을 채워나가고 있습니다. <br/>기술스택 :  HTML, CSS, Vanilla JS </p>
-          <div class="link-btns">
-            <button   type="button" onclick="window.open('https://github.com/yeong30/portfolio')" class="link-btn__source">Source</button>
-          </div>
-        </div>
-        <div class="project">
-          <img class= "project__img" src="./assets/images/portfolio/todoProject_img.png"/>
-          <p class="project__type">개인 프로젝트</p>
-          <div class="project__info">
-            <p class="project__title">ToDo List</p>
-            <p class="project__period">22.04.02 ~ 22.05.30</p>
-          </div>
-          <p class="project__description">날짜를 선택하여 할일을 기록할 수 있는 Todo List 입니다. <br/>기술스택 : HTML, CSS, Vanilla JS, Node.js, firebase Realtime Database</p>
-          <div class="link-btns">
-            <button  type="button" onclick="window.open('https://github.com/yeong30/todo-client')" class="link-btn__source">Source</button>
-            <button type="button" onclick="window.open('https://yeong30.github.io/todo-client/')"  class="link-btn__demo">Demo</button>
-          </div>
-        </div>
-
-        <div class="project">
-          <img class= "project__img" src="./assets/images/portfolio/gardenerProject_img.png"/>
-          <p class="project__type">개인 프로젝트</p>
-          <div class="project__info">
-            <p class="project__title">ImGardener</p>
-            <p class="project__period">22.06.13 ~ 22.06.23</p>
-          </div>
-          <p class="project__description">가드너를 위한 식물 정보 조회 웹입니다. <br/>기술스택 : React, Redux,Redux-thunk, CSS(CSS-module), firebase Realtime Database, Authentication
-          </p>
-          <div class="link-btns">
-            <button  type="button" onclick="window.open('https://github.com/ImGardener/client')" class="link-btn__source">Source</button>
-            <button type="button" onclick="window.open('https://imgardener.netlify.app/')"  class="link-btn__demo">Demo</button>
-          </div>
-        </div>
-      
-    </section>
     <section id="experience" class="section__container sections">
       <div class="container--inner">
       <p class="section__title">Experience</p>

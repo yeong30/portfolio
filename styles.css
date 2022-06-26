@@ -199,6 +199,7 @@ li {
 }
 #about .about__content {
   font-size: var(--font-size-small);
+  line-height: var(--font-size-medium);
 }
 
 /* skills */
