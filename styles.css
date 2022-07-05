@@ -4,7 +4,7 @@
   --font-size-xlarge: 6em;
   --font-size-large: 3.5em;
   --font-size-medium: 1.8em;
-  --font-size-small: 1.3em;
+  --font-size-small: 1.2em;
   --font-size-xsmall: 0.9em;
 
   /* colors */
@@ -68,7 +68,7 @@ li {
   padding: var(--base-size-xlarge);
 }
 .container--inner {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
 }
 /* text base */
@@ -162,7 +162,8 @@ li {
   font-weight: bold;
   margin: auto;
   padding-top: 80px;
-  max-width: 1200px;
+  max-width: 1000px;
+
   gap: var(--base-size-medium);
 }
 .home__user .home__user-img {
@@ -198,7 +199,7 @@ li {
   padding-bottom: var(--base-size-small);
 }
 #about .about__content {
-  font-size: var(--font-size-small);
+  /* font-size: var(--font-size-small); */
   line-height: var(--font-size-medium);
 }
 
@@ -369,7 +370,7 @@ li {
 
 #contact .contact__item {
   padding-left: var(--base-size-small);
-  font-size: var(--font-size-small);
+  /* font-size: var(--font-size-small); */
   display: flex;
   justify-content: center;
   gap: var(--base-size-xsmall);
@@ -380,10 +381,15 @@ li {
   color: black;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .section__title {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-large);
   }
+
+  .section__content {
+    font-size: var(--font-size-small);
+  }
+
   .head .navbar .navbar__list {
     display: none;
     text-align: center;
@@ -431,11 +437,7 @@ li {
     max-width: 90%;
   }
   .home__user .user__introduce {
-    font-size: var(--font-size-medium);
-  }
-
-  #about .about__title {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-large);
   }
 
   /* skills */
@@ -449,5 +451,18 @@ li {
   /* experience */
   .company__project-title {
     font-size: var(--font-size-small);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section__title,
+  .home__user .user__introduce {
+    font-size: var(--font-size-medium);
+  }
+  .section__content {
+    font-size: var(--font-size-xsmall);
+  }
+  .contact__item {
+    font-size: 12px;
   }
 }
